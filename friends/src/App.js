@@ -4,7 +4,7 @@ import './App.css';
 
 import Login from "./components/Login";
 import PrivateRoute from "./components/PrivateRoute";
-import { Friends } from "./components/Friends"
+import { FriendsList } from "./components/Friends"
 
 
 function App() {
@@ -22,8 +22,8 @@ function App() {
       <Link to='/login' onClick={handleLogout}>Logout</Link>
     </nav>
     <Switch>
-      <PrivateRoute path="protected" component={FriendsList} />
-      <Route path="login" component={Login} />
+      <PrivateRoute path="/protected" component={FriendsList} />
+      <Route path="/login" component={Login} />
       <Route component={Login} />
     </Switch>
     </div>
